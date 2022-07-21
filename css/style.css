@@ -52,8 +52,6 @@ body{
 .main-contain{
     display: flex;
     width: 90%;
-    /* background-color: royalblue; */
-    /* margin: 0 auto; */
     align-items: flex-start;
 }
 .left-bar{
@@ -75,6 +73,7 @@ body{
     margin: 0 auto;
     font-size: 1.5em;
     margin-bottom: 5vh;
+    color: #000;
 }
 
  #blogs{
@@ -153,17 +152,83 @@ a.active{
     color: #fff;
 }
 /* media queries for mobile */
+
+@media only screen and (min-width: 320px) and (max-width: 425px){
+
+    #banner{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        padding: 0px;
+        justify-items: center;
+    }
+    .banner-text{
+        color: #fff;
+        padding: 0px 60px;
+    }
+
+    .banner-text h1{
+        font-size: 3em;
+        font-family: 'Dosis', sans-serif;
+    }
+
+    .banner-text button{
+        width: 150px;
+        height: 60px;
+        color: #fff;
+        background-color: crimson;
+        font-size: 1.2em;
+        border-radius: 5px;
+        margin-top: 50px;
+    }
+    .banner-img img{
+        width: 90%;
+        margin-top: 50px;
+    }
+    
+    .main-contain{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        margin: 0;
+    }
+    #blogs{
+        display: grid;
+        grid-template-columns:repeat(1, 1fr) ;
+    }
+    .blog-item{
+        width: 312px;
+    }
+    .left-bar{
+        background-color: #fff;
+        padding: 30px 0px;
+    }
+    .left-bar a{
+        border: 1px solid #d1d1d1;
+    }
+    footer{
+        height: auto;
+    }
+    .footer-text a{
+        padding: 20px 0px;
+        margin: 4px;
+        display: block;
+        text-align: center;
+    }
+    .icons{
+        font: 0.8em sans-serif;
+    }
+
+}
+
 @media only screen and (max-width: 600px) {
-    /* .container{
-        margin: 0px;
-    } */
+   
     #banner{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 90%;
         padding: 0px;
         justify-items: center;
-        /* margin: 0 auto; */
     }
     .banner-text{
         color: #fff;
@@ -218,7 +283,9 @@ a.active{
         display: block;
         text-align: center;
     }
-    
+    .icons{
+        font: 0.8em sans-serif;
+    }
 
  }
 
@@ -294,5 +361,14 @@ a.active{
             justify-content: center;
             flex-wrap: wrap;
         }
-        
+        .footer-text a{
+            text-decoration: none;
+            padding: 10px;
+            color: #fff;
+            text-transform: capitalize;
+            margin-left: 70px;
+        }
+        .icons{
+            font: 0.8em sans-serif;
+        }
 }
